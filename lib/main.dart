@@ -10,14 +10,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
     await Firebase.initializeApp(
-        options: const FirebaseOptions(
-            apiKey: "AIzaSyAA60HEHiipxM5MRnyHXosJcjP9MORZqnc",
-            authDomain: "inventory-manager-a3c5c.firebaseapp.com",
-            projectId: "inventory-manager-a3c5c",
-            storageBucket: "inventory-manager-a3c5c.appspot.com",
-            messagingSenderId: "209701813131",
-            appId: "1:209701813131:web:e47165b40db5899063cd8e",
-            measurementId: "G-B99LBXXLRF"));
+        options: 
   } else {
     await Firebase.initializeApp();
   }
