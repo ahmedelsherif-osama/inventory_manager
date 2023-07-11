@@ -9,6 +9,7 @@
 .history
 .svn/
 .env/
+/inventory_manager/lib/.env
 migrate_working_dir/
 
 # IntelliJ related
