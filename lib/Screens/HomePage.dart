@@ -5,6 +5,7 @@ import 'package:inventory_manager/Screens/LoggedInPage.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     if (FirebaseAuth.instance.currentUser != null) {
@@ -16,10 +17,8 @@ class HomePage extends StatelessWidget {
           children: [
             Text("Welcome to Inventory Manager"),
             ElevatedButton(
-                onPressed: () => context.go('/login'), child: Text("Log in")),
-            ElevatedButton(
-                onPressed: () => context.go('/registration'),
-                child: Text("Register")),
+                onPressed: () => context.go('/login'),
+                child: Text("Log in - Register")),
             ElevatedButton(
                 onPressed: () => context.go('/aboutus'),
                 child: Text("Tutorial - About us")),

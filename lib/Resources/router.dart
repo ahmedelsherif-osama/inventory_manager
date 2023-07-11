@@ -3,17 +3,16 @@ import 'package:go_router/go_router.dart';
 import 'package:inventory_manager/Resources/user-activity-detector.dart';
 import 'package:inventory_manager/Screens/AboutUs.dart';
 import 'package:inventory_manager/Screens/AccessManagement.dart';
+import 'package:inventory_manager/Screens/DispatchTablet.dart';
 import 'package:inventory_manager/Screens/FileTypeErrorPage.dart';
-import 'package:inventory_manager/Screens/LoginErrorPage.dart';
 import 'package:inventory_manager/Screens/ManageHubs.dart';
 
 import '../Screens/DeployBoxesToHub.dart';
 import '../Screens/HomePage.dart';
 import '../Screens/LoggedInPage.dart';
-import '../Screens/LoginPage.dart';
+import '../Screens/LoginOrRegisterPage.dart';
 import '../Screens/NewShipmentImportPage.dart';
 import '../Screens/OnHandStockPage.dart';
-import '../Screens/RegistrationPage.dart';
 
 final router = GoRouter(
   routes: [
@@ -22,17 +21,22 @@ final router = GoRouter(
       builder: (context, state) => UserActivityDetector(child: HomePage()),
     ),
     GoRoute(
+      path: '/dispatchtablet',
+      builder: (context, state) =>
+          UserActivityDetector(child: DispatchTabletPage()),
+    ),
+    GoRoute(
       path: '/loggedin',
       builder: (context, state) => UserActivityDetector(child: loggedInPage()),
     ),
     GoRoute(
       path: '/login',
-      builder: (context, state) => UserActivityDetector(child: LoginPage()),
+      builder: (context, state) =>
+          UserActivityDetector(child: LoginOrRegisterPage()),
     ),
     GoRoute(
       path: '/registration',
-      builder: (context, state) =>
-          UserActivityDetector(child: RegistrationPage()),
+      builder: (context, state) => LoginOrRegisterPage(),
     ),
     GoRoute(
       path: '/onhand',
@@ -61,10 +65,6 @@ final router = GoRouter(
     GoRoute(
       path: '/managehubs',
       builder: (context, state) => UserActivityDetector(child: ManageHubs()),
-    ),
-    GoRoute(
-      path: '/loginerror',
-      builder: (context, state) => LoginErrorPage(),
     ),
     GoRoute(
       path: '/fileerrorpage',

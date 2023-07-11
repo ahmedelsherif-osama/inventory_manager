@@ -83,7 +83,7 @@ class CSVToFirebase {
     //done with splitting it to list
 
     //now lets createa a list of keys
-    var keys = textList.getRange(0, columns).toList();
+    keys = textList.getRange(0, columns).toList();
     //done with list of keys
 
     //actually, lets just get a list of the values alone without the keys
