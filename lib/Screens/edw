@@ -1,0 +1,22 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+// assuming you have a Firestore instance set up
+final CollectionReference collectionReference = FirebaseFirestore.instance.collection('myCollection');
+
+// get the document id from a QuerySnapshot
+StreamBuilder<QuerySnapshot>(
+  stream: collectionReference.snapshots(),
+  builder: (_, snapshot) {
+    if (!snapshot.hasData) {
+      return CircularProgressIndicator();
+    }
+    final documentId = snapshot.data.docs[index].id;
+    // use the document id as needed
+  },
+);
+
+// get the document id from a DocumentSnapshot
+collectionReference.doc('myDocument').get().then((DocumentSnapshot documentSnapshot) {
+  final documentId = documentSnapshot.id;
+  // use the document id as needed
+});

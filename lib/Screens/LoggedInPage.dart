@@ -128,7 +128,7 @@ class loggedInPage extends StatelessWidget {
                       ],
                     ),
                   ));
-                case 'Hub user':
+                case 'hub':
                   return (Container(
                     child: Column(
                       children: [
