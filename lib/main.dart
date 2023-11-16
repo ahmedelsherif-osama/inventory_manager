@@ -16,13 +16,13 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: dotenv.env['apiKey'].toString(),
-            authDomain: dotenv.env['authDomain'].toString(),
-            projectId: dotenv.env['projectId'].toString(),
-            storageBucket: dotenv.env['storageBucket'].toString(),
-            messagingSenderId: dotenv.env['messagingSenderId'].toString(),
-            appId: dotenv.env['appId'].toString(),
-            measurementId: dotenv.env['measurementId'].toString()));
+      apiKey: dotenv.env['apiKey'].toString(),
+      authDomain: dotenv.env['authDomain'].toString(),
+      projectId: dotenv.env['projectId'].toString(),
+      storageBucket: dotenv.env['storageBucket'].toString(),
+      messagingSenderId: dotenv.env['messagingSenderId'].toString(),
+      appId: dotenv.env['appId'].toString(),
+    ));
   } else {
     await Firebase.initializeApp();
   }
