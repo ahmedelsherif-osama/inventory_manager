@@ -6,6 +6,10 @@ import 'package:inventory_manager/Screens/LoggedInPage.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  void test(){
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     if (FirebaseAuth.instance.currentUser != null) {

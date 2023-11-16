@@ -1,16 +1,42 @@
-# inventory_manager
+Inventory Manager App - Flutter
+Overview
+The Inventory App is a powerful solution built with Flutter, combining essential features into a single interface. It simplifies inventory management by enabling seamless scanning of inventory boxes using QR codes or barcodes. The app also facilitates real-time stock location updates based on the destination and allows for the creation and swift dispatch of purchase orders (PO) to specified destinations.
 
-A new Flutter project.
+Features
+Inventory Scanning:
 
-## Getting Started
+Scan QR codes or barcodes on inventory boxes for quick and accurate identification.
+Stock Location Updates:
 
-This project is a starting point for a Flutter application.
+Dynamically update stock locations based on the destination, ensuring precise inventory tracking.
+Purchase Order Management:
 
-A few resources to get you started if this is your first Flutter project:
+Create and send purchase orders directly from the app, optimizing the procurement process.
+Getting Started
+Clone the Repository:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+bash
+Copy code
+git clone https://github.com/your-username/inventory-app-flutter.git
+Navigate to the Project Directory:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+bash
+Copy code
+cd inventory-app-flutter
+Update Dependencies:
+
+bash
+Copy code
+flutter pub get
+Run the App:
+
+bash
+Copy code
+flutter run
+
+Requirements
+Flutter: Install Flutter
+Dart: Install Dart
+
+Contributing
+We welcome contributions! If you'd like to contribute to the project, please follow our contribution guidelines.
